@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&family=Montserrat:wght@400;500;600;700;900&display=swap');
+
+/* START STYLİNG OF ELEMENTS OF HEADER. (HEADER)*/
+.company { 
+    font: italic 1.25em 'Jura', sans-serif ;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 50px;
+    padding-right: 40px;
+}
+
+/* start styling of elements of header__top (nav, menu, ...etc) */
+.header__top { 
+    background: #f6f6f6;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 20px;
+}
+.nav__menu {
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	background: #f6f6f6;
+	width: 100%;
+	text-align: center;
+	transition: .6s;
+	box-shadow: 0 10px 27px #00000080;
+	left: -100%;
+	top: 180px;
+    z-index: 1;
+}
+.nav__menu.active { left: 0 }
+.nav__menu-item { margin: 25px 0 } 
+.nav__menu-link { 
+    font: 500 1em 'Montserrat', sans-serif; 
+    color: #000 
+}
+.hamb { cursor: pointer }
+.hamb.active .bar:nth-child(2) { opacity: 0 }
+.hamb.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg) }
+.hamb.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg) }
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: .3s;
+    background: #000;
+}
+.search { font-size: 1.5em }
+.search * { 
+    cursor: pointer; 
+    margin-right: 10px 
+}
+
+/* start styling of elements of header__content */
+.registration { text-align: center; padding: 30px }
+.registration__link { text-decoration: underline }
+.registration__text, .registration__link {
+    font: .9em 'Montserrat', sans-serif;
+    color: #000;  
+}
+.header__content-inner {
+    position: relative;
+    min-height: 525px;
+    width: 100%;
+    background: url('../img/headerBg2.png') center/cover;
+    padding: 75px 45px;
+}
+.title {
+    max-width: 400px;
+    font: bold 2.2em/1.5em 'Montserrat', sans-serif;
+    color: #fff;
+}
+.addintional-info {
+    position: absolute;
+    bottom: 30px;
+}
+.addintional-info * {
+    font-family: 500 1em 'Montserrat', sans-serif;
+    color: #fff;
+    margin-right: 10px;
+}
+/* FİNİSH STYLİNG OF ELEMENTS OF HEADER. (HEADER)*/
+
+@media only screen and (min-width: 768px) {
+    .container { 
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+
+    /* START STYLİNG OF ELEMENTS OF HEADER. (HEADER)*/
+    .nav {  padding: 0 70px 0 20px }
+	.nav__menu {
+        position: inherit;
+        flex-direction: row;
+        background: inherit;
+        width: inherit;
+        transition: inherit;
+        box-shadow: inherit;
+    }
+    .nav__menu-item:not(:last-child) { margin-right: 30px }
+	.hamb { display: none }
+    .header__content-inner { background: url('../img/headerBg.png') center/cover }
+    .addintional-info * { margin-right: 30px }
+    /* FİNİSH STYLİNG OF ELEMENTS OF HEADER. (HEADER)*/
+
+}
