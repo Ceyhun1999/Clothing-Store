@@ -4,14 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     </head>
     <body>
-        <header class="header">
-            <div class="company">Nike</div>
-            <div class="header__top">
-                <div class="container">
+        <div class="page">
+            <header class="header">
+                <div class="company">Nike</div>
+                <div class="header__top">
                     <div class="header__top-inner">
                         <nav class="nav">
                             <a class="nav__logo-link" href="#">
@@ -46,30 +48,113 @@
                         </nav>
                     </div>
                 </div>
-            </div>
-            <div class="header__content">
-                <div class="container">
-                    <div class="registration">
-                        <span class="registration__text">Еще нет аккаунта?</span>
-                        <a class="registration__link" href="#">Зарегистрироваться</a>
-                    </div>
-                    <div class="header__content-inner">
-                        <h1 class="title">Заниматесь фитнесом вместе с нами</h1>
-                        <div class="addintional-info">
-                            <a class="more" href="#">
-                                Подробнее 
-                                <i class="fas fa-chevron-right"></i>
-                            </a>     
-                            <a class="collection" href="#">
-                                Коллекция 
-                                <i class="fas fa-chevron-right"></i>
-                            </a> 
+                <div class="header__content">
+                    <div class="container">
+                        <div class="header__content">
+                            <div class="registration">
+                                <span class="registration__text">Еще нет аккаунта?</span>
+                                <a class="registration__link" href="#">Зарегистрироваться</a>
+                            </div>
+                            <div class="header__content-inner">
+                                <h1 class="title">Заниматесь фитнесом вместе с нами</h1>
+                                <div class="addintional-info">
+                                    <a class="more" href="#">
+                                        Подробнее 
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>     
+                                    <a class="collection" href="#">
+                                        Коллекция 
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a> 
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>
+            <main class="main">
+                <section class="first-section">
+                    <div class="first-section__container">
+                        <div data-wow-duration="3s" class="discount  wow animate__animated animate__backInRight">
+                            <h2 class="discount__title">Скидки</h2>       
+                            <p class="discount__text">На куртки, ветровки и мн. др.</p> 
+                            <div class="discount__btns">
+                                <button class="btn1">Позже</button>
+                                <button class="btn2">Смотреть</button>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div data-wow-duration="3s" class="slider-top wow animate__animated animate__fadeInLeftBig">
+                                <h3 class="slider__title">Набирает обороты</h3>
+                                <div class="buttons-slider">
+                                    <button class="btn-left">
+                                        <i class="fas fa-arrow-left"></i>
+                                    </button>
+                                    <button class="btn-right">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>  
+                        </div> 
+                        <div class="container">
+                            <div class="slider">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="img/img1.png" alt="Slide1" /> 
+                                            <div class="content-slide">
+                                                <span class="product-name">Nike Sportswear Therma-FIT Repel</span>
+                                                <span class="product-price">От 7 990 ₽<i class="fas fa-chevron-right"></i></span>
+                                                <span class="product">Мужская куртка</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="img/img2.png" alt="Slide2" />
+                                            <div class="content-slide">
+                                                <span class="product-name">Форма сборной Португалии Strike</span>
+                                                <span class="product-price">От 4 990 ₽ <i class="fas fa-chevron-right"></i></span>
+                                                <span class="product">Мужской комплект</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="img/img4.png" alt="Slide3" /> 
+                                            <div class="content-slide">
+                                                <span class="product-name">Nike Crossover</span>
+                                                <span class="product-price">От 2 990 ₽ <i class="fas fa-chevron-right"></i></span>
+                                                <span class="product">Мужской комплект</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="img/img5.png" alt="Slide4" /> 
+                                            <div class="content-slide">
+                                                <span class="product-name">Nike</span>
+                                                <span class="product-price">От 1 590 ₽ <i class="fas fa-chevron-right"></i></span>
+                                                <span class="product">Мужские шорты</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="img/img6.png" alt=""> 
+                                            <div class="content-slide">
+                                                <span class="product-name">Nike Heritage86</span>
+                                                <span class="product-price">1 199 ₽<i class="fas fa-chevron-right"></i></span>
+                                                <span class="product">Детская бейсболка </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>  
+                <section class="second-section"></section>  
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="https://kit.fontawesome.com/d4a8753bf6.js" crossorigin="anonymous"></script>
-        <script src="javascript.js"></script>
+        <script src="js/javascript.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
     </body>
 </html>

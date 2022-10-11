@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura&family=Montserrat:wght@400;500;600;700;900&display=swap');
 
+.page { overflow: hidden }
+.container {
+    max-width: 1250px;
+    margin: auto;
+    text-align: center;
+}
+
 /* START STYLİNG OF ELEMENTS OF HEADER. (HEADER)*/
 .company { 
     font: italic 1.25em 'Jura', sans-serif ;
@@ -10,9 +17,10 @@
     padding-right: 40px;
 }
 
-/* start styling of elements of header__top (nav, menu, ...etc) */
+/* styling of elements of header__top (nav, menu, ...etc) */ 
 .header__top { 
     background: #f6f6f6;
+    width: 100%;
 }
 .nav {
     display: flex;
@@ -28,7 +36,6 @@
 	background: #f6f6f6;
 	width: 100%;
 	text-align: center;
-	transition: .6s;
 	box-shadow: 0 10px 27px #00000080;
 	left: -100%;
 	top: 180px;
@@ -49,16 +56,15 @@
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    transition: .3s;
     background: #000;
 }
 .search { font-size: 1.5em }
 .search * { 
     cursor: pointer; 
-    margin-right: 10px 
+    margin-right: 10px;
 }
 
-/* start styling of elements of header__content */
+/* styling of elements of header__content */ 
 .registration { text-align: center; padding: 30px }
 .registration__link { text-decoration: underline }
 .registration__text, .registration__link {
@@ -66,11 +72,19 @@
     color: #000;  
 }
 .header__content-inner {
+    height: 100vh;
     position: relative;
-    min-height: 525px;
     width: 100%;
-    background: url('../img/headerBg2.png') center/cover;
+    background: url('../img/headerBg2.png') center/cover ;
     padding: 75px 45px;
+    animation-name: example;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: none;
+}
+@keyframes example {
+    0%   {left: -100%;}
+    100% {left: 0;}
 }
 .title {
     max-width: 400px;
@@ -80,34 +94,159 @@
 .addintional-info {
     position: absolute;
     bottom: 30px;
+    display: flex;
 }
 .addintional-info * {
     font-family: 500 1em 'Montserrat', sans-serif;
     color: #fff;
     margin-right: 10px;
+    margin-bottom: 5px;
 }
 /* FİNİSH STYLİNG OF ELEMENTS OF HEADER. (HEADER)*/
 
+/* START STYLİNG OF ELEMENTS OF MAIN. (MAIN)*/
+/* styling of elements of first-section */ 
+.first-section { padding-bottom: 100px }
+.discount {
+    max-width: 340px;
+    margin: auto;
+    text-align: center;
+    padding: 50px 0 70px 0;
+}
+.discount__title { font: bold 2.2em 'Montserrat', sans-serif }
+.discount__text { font: 500 1.1em 'Montserrat', sans-serif }
+.discount__btns {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.btn1 { background: #eee }
+.btn2 { background: #000; color: #fff; }
+.btn1, .btn2 {
+    transition: 1s;
+    font: 600 1.1em 'Montserrat', sans-serif;
+    padding: 15px ;
+    width: 165px;
+    border-radius: 50px;
+    border: none;
+}
+.slider-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+.slider__title { font: 600 1.6em 'Montserrat', sans-serif }
+.btn-left, .btn-right {
+    background: transparent;
+    border: 0;
+}
+.fa-arrow-left, .fa-arrow-right {
+    font-size: 3em;
+    color: #e7e7e7;
+    margin-left: 20px;
+}
+.slider { position: relative }
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100vw;
+    z-index: 2;
+    left: 0;
+    background: #fff;
+    transform: translate(-100%, 0);
+}
+.swiper-slide > img {max-width: 100%}
+.swiper, .swiper2 { overflow: visible }
+.slick-track { display: flex }
+.content-slide { padding-top: 25px }
+.content-slide span { 
+    display: block;
+    padding: 5px 0;
+}
+.product-name { font: 500 1.25em 'Montserrat', sans-serif }
+.product-price, .product { font: 500 1.1em 'Montserrat', sans-serif }
+.product { color: #949494 }
+
+
+
+
+
 @media only screen and (min-width: 768px) {
-    .container { 
-        max-width: 1250px;
-        margin: 0 auto;
-    }
+    .container { text-align: inherit }
 
     /* START STYLİNG OF ELEMENTS OF HEADER. (HEADER)*/
+    /* styling of elements of header__top (nav, menu, ...etc) */ 
     .nav {  padding: 0 70px 0 20px }
 	.nav__menu {
         position: inherit;
         flex-direction: row;
         background: inherit;
         width: inherit;
-        transition: inherit;
+        transition: initial;
         box-shadow: inherit;
     }
+    .nav__menu-item { transition: .6s }
     .nav__menu-item:not(:last-child) { margin-right: 30px }
+    .nav__menu-item:hover::after { width: 100% } 
+    .nav__menu-item::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background: #000;
+        transition: width .5s;
+    }
 	.hamb { display: none }
-    .header__content-inner { background: url('../img/headerBg.png') center/cover }
+    .search *, .bar { transition: .3s }
+    .search *:hover { font-size: 1.5em }
+    
+    /* styling of elements of header__content */ 
+    .header__content-inner { 
+        max-width: 1250px;
+        margin: 0 auto;
+        background: url('../img/headerBg.png') center/cover fixed; 
+    }
     .addintional-info * { margin-right: 30px }
+    .more:hover::after,
+    .collection:hover::after { width: 80% }
+    .more::after, .collection::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background: #fff;
+        transition: width .5s;
+    }
     /* FİNİSH STYLİNG OF ELEMENTS OF HEADER. (HEADER)*/
 
+    /* START STYLİNG OF ELEMENTS OF MAIN. (MAIN)*/
+    /* styling of elements of first-section */ 
+    .fa-arrow-left:hover, .fa-arrow-right:hover {
+        color: black;
+        cursor: pointer;
+    }
+    .swiper-slide { transition: .8s }
+    .swiper-slide:hover { filter: drop-shadow(1rem 1rem 2rem #585858) }
+    .btn1:hover {
+        background: #dbdada;
+        filter: drop-shadow(0 0 0.75rem #888585);
+        cursor: pointer;
+    }
+    .btn2:hover {
+        background: #3d3c3c;
+        filter: drop-shadow(0 0 0.75rem #2b2a2a);
+        color: #fff;
+        cursor: pointer;
+    }
+    
 }
+
+
+
+
+
+  
+
