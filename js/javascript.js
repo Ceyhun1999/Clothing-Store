@@ -89,4 +89,41 @@ new Swiper('.swiper2',{
         }}
 })
 
+new Swiper('.swiper3',{
+    navigation: {
+        nextEl: '.btn-right',
+        prevEl: '.btn-left',
+    },
+    grabCursor:true,
+    slidesPerView: 1.5,
+    spaceBetween: 65,
+    loop: true,
+    autoplay: {
+        delay: 2000,
+        stopOnLastSlide: true,
+        disableOnInteraction: true,
+    },
+    speed: 800,
+    breakpoints: {
+        280: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 1.5,
+        },
+        992: {
+            slidesPerView: 2.5,
+        },
+    },on: {
+        init() {
+          this.el.addEventListener('mouseenter', () => {
+            this.autoplay.stop();
+          });
+    
+          this.el.addEventListener('mouseleave', () => {
+            this.autoplay.start();
+          });
+        }}
+})
+
 

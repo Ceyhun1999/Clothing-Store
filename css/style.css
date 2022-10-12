@@ -106,7 +106,7 @@
 
 /* START STYLİNG OF ELEMENTS OF MAIN. (MAIN)*/
 /* styling of elements of first-section */ 
-.first-section { padding-bottom: 100px }
+.first-section { padding-bottom: 150px }
 .discount {
     max-width: 340px;
     margin: auto;
@@ -170,10 +170,64 @@
 .product-price, .product { font: 500 1.1em 'Montserrat', sans-serif }
 .product { color: #949494 }
 
+/* styling of elements of third-section */ 
+.third-section { padding: 100px 0 }
+.blok-moda__inner {
+    background: url('../img/bigBackground.png') center/cover fixed;
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.block-moda__content {
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+}
+.blok-moda__title {
+    font: 500 1.3em 'Montserrat', sans-serif;
+    padding-bottom: 25px;
+    color: #fff;
+}
 
+/* styling of elements of five-section */ 
+.five-section { padding: 100px 0 }
 
+/* styling of elements of six-section */ 
+.six-section {
+    background: url('../img/six-section-background-mobil.png') center/cover;
+    min-height: 450px;
+    width: 100%;
+}
+.nike-club {
+    flex-direction: column;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-top: 70px;
+}
+.nike-club__title { 
+    font: 900 2em 'Montserrat', sans-serif;
+    color: #fff;
+}
+.nike-club__subtitle { 
+    font: 500 1.5em 'Montserrat', sans-serif ;
+    color: #fff;
+}
+.btn3 {
+    font: 600 1.1em 'Montserrat', sans-serif;
+    margin-top: 80px;
+    width: 140px;
+    padding: 13px;
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+    transition: .5s;
+}
 
-
+/* styling of elements of seven-section */ 
+.seven-section {
+    padding: 100px 0;
+}
 @media only screen and (min-width: 768px) {
     .container { text-align: inherit }
 
@@ -241,7 +295,17 @@
         color: #fff;
         cursor: pointer;
     }
-    
+
+    /* styling of elements of six-section */ 
+    .btn3:hover {
+        background: #dbdada;
+        filter: drop-shadow(0 0 0.75rem #888585);
+        cursor: pointer;
+    }
+
+    /* styling of elements of six-section */
+    .six-section { background: url('../img/six-section-background.png') center/cover }
+    .nike-club__title { font-size: 2.8em }
 }
 
 
