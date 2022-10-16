@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura&family=Montserrat:wght@400;500;600;700;900&display=swap');
 
+html { scroll-behavior: smooth}
 .page { overflow: hidden }
 .container {
     max-width: 1250px;
@@ -40,6 +41,7 @@
 	left: -100%;
 	top: 180px;
     z-index: 1;
+    transition: 1s;
 }
 .nav__menu.active { left: 0 }
 .nav__menu-item { margin: 25px 0 } 
@@ -158,7 +160,8 @@
     background: #fff;
     transform: translate(-100%, 0);
 }
-.swiper-slide > img {max-width: 100%}
+.swiper-slide { position: relative }
+.swiper-slide > img {max-width: 100% }
 .swiper, .swiper2 { overflow: visible }
 .slick-track { display: flex }
 .content-slide { padding-top: 25px }
@@ -225,9 +228,76 @@
 }
 
 /* styling of elements of seven-section */ 
-.seven-section {
-    padding: 100px 0;
+.seven-section { padding: 100px 0 }
+.slideBtn {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
 }
+
+/* START STYLİNG OF ELEMENTS OF FOOTER. (FOOTER)*/
+.footer { background: #f6f6f6 }
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 50px;
+}
+.footer__title { 
+    font: bold 1.2em 'Montserrat', sans-serif;
+    padding-bottom: 40px;
+}
+.footer__item {
+    font: bold 1.2em 'Montserrat', sans-serif;
+    color: #858585;
+    display: block;
+    padding-bottom: 20px;
+}
+.footer-1, .footer-2, .footer-3 { 
+    text-align: center;
+    padding-bottom: 50px;
+}
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dbdbdb;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    transition: .3s;
+}
+.icon {
+    font-size: 2em;
+    display: block;
+    margin: auto;
+    color: #acacac;
+}
+.footer-line {
+    height: 5px;
+    background: #c4c4c4;
+    width: 100%;
+}
+.footer__bottom {
+    padding: 20px;
+    text-align: center;
+}
+.verification {
+    color: #858585;
+    font: 500 .9em 'Montserrat', sans-serif;
+    margin-bottom: 40px;
+    display: block;
+}
+.additional-info__link {
+    color: #858585;
+    font: 600 1.1em 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 768px) {
     .container { text-align: inherit }
 
@@ -306,8 +376,49 @@
     /* styling of elements of six-section */
     .six-section { background: url('../img/six-section-background.png') center/cover }
     .nike-club__title { font-size: 2.8em }
-}
 
+    /* START STYLİNG OF ELEMENTS OF FOOTER. (FOOTER)*/
+    .footer__content {
+        display: flex ; 
+        justify-content: space-between;
+        flex-direction: inherit;
+    }
+    .footer__top { display: flex }
+    .footer-1, .footer-2, .footer-3 { text-align: inherit }
+    .footer-1 { margin-right: 100px }
+    .footer-3 {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer__item { transition: .6s }
+    .footer__item:hover { cursor: pointer }
+    .footer__item:hover::after { width: 100% } 
+    .footer__item::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 5px;
+        background: #858585;
+        transition: width .5s;
+    }
+    .icon-circle:hover {
+        background: #2b2a2a;
+        cursor: pointer;
+    }
+    .footer__bottom {
+        text-align: inherit;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    
+    .additional-info__menu {
+        display: flex;
+        justify-content: space-between;
+    } 
+    
+}
 
 
 

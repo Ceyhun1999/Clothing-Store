@@ -21,19 +21,19 @@
                             </a>
                             <ul class="nav__menu">
                                 <li class="nav__menu-item">
-                                    <a class="nav__menu-link" href="#">Тренд</a>
+                                    <a class="nav__menu-link" href="#trend">Тренд</a>
                                 </li>
                                 <li class="nav__menu-item">
-                                    <a class="nav__menu-link" href="#">Дети</a>
+                                    <a class="nav__menu-link" href="#children">Дети</a>
                                 </li>
                                 <li class="nav__menu-item">
-                                    <a class="nav__menu-link" href="#">Подростки</a>
+                                    <a class="nav__menu-link" href="#teenagers">Подростки</a>
                                 </li>
                                 <li class="nav__menu-item">
-                                    <a class="nav__menu-link" href="#">Взрослые</a>
+                                    <a class="nav__menu-link" href="#adults">Взрослые</a>
                                 </li>
                                 <li class="nav__menu-item">
-                                    <a class="nav__menu-link" href="#">Скидки</a>
+                                    <a class="nav__menu-link" href="#discount">Скидки</a>
                                 </li>
                             </ul>
                             <div class="search">
@@ -56,7 +56,7 @@
                                 <a class="registration__link" href="#">Зарегистрироваться</a>
                             </div>
                             <div class="header__content-inner">
-                                <h1 class="title">Заниматесь фитнесом вместе с нами</h1>
+                                <h1 id="trend" class="title">Заниматесь фитнесом вместе с нами</h1>
                                 <div class="addintional-info">
                                     <a class="more" href="#">
                                         Подробнее 
@@ -76,7 +76,7 @@
                 <section class="first-section">
                     <div class="first-section__container">
                         <div data-wow-duration="2s" class="discount  wow animate__animated animate__backInRight">
-                            <h2 class="discount__title">Скидки</h2>       
+                            <h2 id="discount" class="discount__title">Скидки</h2>       
                             <p class="discount__text">На куртки, ветровки и мн. др.</p> 
                             <div class="discount__btns">
                                 <button class="btn1">Позже</button>
@@ -85,7 +85,7 @@
                         </div>
                         <div class="container">
                             <div data-wow-duration="2s" class="slider-top wow animate__animated animate__fadeInLeftBig">
-                                <h3 class="slider__title">Набирает обороты</h3>
+                                <h3 id="teenagers" class="slider__title">Набирает обороты</h3>
                                 <div class="buttons-slider">
                                     <button class="btn-left">
                                         <i class="fas fa-arrow-left"></i>
@@ -149,7 +149,7 @@
                 <section class="second-section">
                     <div class="container">
                         <div data-wow-duration="3s" class="slider-top wow animate__animated animate__fadeInLeftBig">
-                            <h3 class="slider__title">Распродажа</h3>
+                            <h3 id="children" class="slider__title">Распродажа</h3>
                             <div class="buttons-slider">
                                 <button class="btn-left">
                                     <i class="fas fa-arrow-left"></i>
@@ -262,7 +262,7 @@
                 <section class="five-section">
                     <div class="container">
                         <div data-wow-duration="3s" class="slider-top wow animate__animated animate__fadeInLeftBig">
-                            <h3 class="slider__title">Распродажа</h3>
+                            <h3 id="adults" class="slider__title">Распродажа</h3>
                             <div class="buttons-slider">
                                 <button class="btn-left">
                                     <i class="fas fa-arrow-left"></i>
@@ -329,18 +329,15 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img src="img/endSlide-1.png" alt="Slide1" /> 
-                                        <div class="content-slide">
-                                        </div>
+                                        <button class="btn3 slideBtn">Мужчины</button>
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="img/endSlide-2.png" alt="Slide2" />
-                                        <div class="content-slide">
-                                        </div>
+                                        <button class="btn3 slideBtn">Женщины</button>
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="img/endSlide-3.png" alt="Slide3" />
-                                        <div class="content-slide">
-                                        </div>
+                                        <button class="btn3 slideBtn"> Дети</button>
                                     </div>
                                 </div>
                             </div>
@@ -348,6 +345,59 @@
                     </div>
                 </section>
             </main>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__content">
+                        <div class="footer__top">
+                            <div class="footer-1">
+                                <h6 class="footer__title">ПОМОЩЬ</h6>
+                                <span class="footer__item">Вопросы</span>
+                                <span class="footer__item">Связаться с нами</span>
+                                <span class="footer__item">Доставка</span>
+                            </div>
+                            <div class="footer-2">
+                                <h6 class="footer__title">КОМПАНИЯ</h6>
+                                <span class="footer__item">Вопросы</span>
+                                <span class="footer__item">Связаться с нами</span>
+                                <span class="footer__item">Доставка</span>
+                            </div>
+                        </div>
+                        <div class="footer-3">
+                            <div class="icon-circle">
+                                <i class="fab fa-google-play icon"></i>
+                            </div>
+                            <div class="icon-circle">
+                                <i class="fab fa-youtube icon"></i>
+                            </div>
+                            <div class="icon-circle">
+                                <i class="fab fa-facebook-square icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-line"></div>
+                <div class="container">
+                    <div class="footer__bottom">
+                        <span class="verification">© Nike, Inc., 2021. Все права защищены.</span>
+                        <div class="additional-info">
+                            <ul class="additional-info__menu">
+                                <li class="additional-info__item">
+                                    <a href="#" class="additional-info__link">Конфиденциальность</a>
+                                </li>
+                                <li class="additional-info__item">
+                                    <a href="#" class="additional-info__link">О компании</a>
+                                </li>
+                                <li class="additional-info__item">
+                                    <a href="#" class="additional-info__link">Отзывы</a>
+                                </li>
+                                <li class="additional-info__item">
+                                    <a href="#" class="additional-info__link">Каталог</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="https://kit.fontawesome.com/d4a8753bf6.js" crossorigin="anonymous"></script>
