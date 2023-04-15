@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura&family=Montserrat:wght@400;500;600;700;900&display=swap');
 
 html { scroll-behavior: smooth}
+.over { overflow: hidden }
 .page { overflow: hidden }
 .container {
     max-width: 1250px;

@@ -1,29 +1,31 @@
-
 const hamb = document.querySelector(".hamb");
 const navMenu = document.querySelector(".nav__menu");
+const body = document.querySelector("body");
 
 hamb.addEventListener("click", () => {
-    hamb.classList.toggle("active")
+    hamb.classList.toggle("active");
     navMenu.classList.toggle("active");
-})
+    body.classList.toggle("over");
+});
 
 const navLink = document.querySelectorAll(".nav__menu-link");
 
 navLink.forEach((item) => {
-    item.addEventListener("click", closeMenu)
-})
+    item.addEventListener("click", closeMenu);
+});
 
 function closeMenu() {
     hamb.classList.remove("active");
     navMenu.classList.remove("active");
+    body.classList.remove("over");
 }
 
-new Swiper('.swiper',{
+new Swiper(".swiper", {
     navigation: {
-        nextEl: '.btn-right',
-        prevEl: '.btn-left',
+        nextEl: ".btn-right",
+        prevEl: ".btn-left",
     },
-    grabCursor:true,
+    grabCursor: true,
     slidesPerView: 2.5,
     spaceBetween: 65,
     loop: true,
@@ -43,24 +45,26 @@ new Swiper('.swiper',{
         992: {
             slidesPerView: 2.5,
         },
-    },on: {
-        init() {
-          this.el.addEventListener('mouseenter', () => {
-            this.autoplay.stop();
-          });
-    
-          this.el.addEventListener('mouseleave', () => {
-            this.autoplay.start();
-          });
-        }}
-})
-
-new Swiper('.swiper2',{
-    navigation: {
-        nextEl: '.btn-right',
-        prevEl: '.btn-left',
     },
-    grabCursor:true,
+    on: {
+        init() {
+            this.el.addEventListener("mouseenter", () => {
+                this.autoplay.stop();
+            });
+
+            this.el.addEventListener("mouseleave", () => {
+                this.autoplay.start();
+            });
+        },
+    },
+});
+
+new Swiper(".swiper2", {
+    navigation: {
+        nextEl: ".btn-right",
+        prevEl: ".btn-left",
+    },
+    grabCursor: true,
     slidesPerView: 1.5,
     spaceBetween: 65,
     loop: true,
@@ -77,24 +81,26 @@ new Swiper('.swiper2',{
         992: {
             slidesPerView: 1.5,
         },
-    },on: {
-        init() {
-          this.el.addEventListener('mouseenter', () => {
-            this.autoplay.stop();
-          });
-    
-          this.el.addEventListener('mouseleave', () => {
-            this.autoplay.start();
-          });
-        }}
-})
-
-new Swiper('.swiper3',{
-    navigation: {
-        nextEl: '.btn-right',
-        prevEl: '.btn-left',
     },
-    grabCursor:true,
+    on: {
+        init() {
+            this.el.addEventListener("mouseenter", () => {
+                this.autoplay.stop();
+            });
+
+            this.el.addEventListener("mouseleave", () => {
+                this.autoplay.start();
+            });
+        },
+    },
+});
+
+new Swiper(".swiper3", {
+    navigation: {
+        nextEl: ".btn-right",
+        prevEl: ".btn-left",
+    },
+    grabCursor: true,
     slidesPerView: 1.5,
     spaceBetween: 65,
     loop: true,
@@ -114,16 +120,16 @@ new Swiper('.swiper3',{
         992: {
             slidesPerView: 2.5,
         },
-    },on: {
+    },
+    on: {
         init() {
-          this.el.addEventListener('mouseenter', () => {
-            this.autoplay.stop();
-          });
-    
-          this.el.addEventListener('mouseleave', () => {
-            this.autoplay.start();
-          });
-        }}
-})
+            this.el.addEventListener("mouseenter", () => {
+                this.autoplay.stop();
+            });
 
-
+            this.el.addEventListener("mouseleave", () => {
+                this.autoplay.start();
+            });
+        },
+    },
+});
